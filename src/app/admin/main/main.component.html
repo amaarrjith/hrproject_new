@@ -1,0 +1,146 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>SeoDash Free Bootstrap Admin Template by Adminmart</title>
+    <link rel="shortcut icon" type="image/png" href="/assets/images/logos/seodashlogo.png" />
+    <link rel="stylesheet" href="/assets/css/styles.min.css" />
+    <!-- Include Font Awesome CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  </head>
+  <body>
+    <!--  Body Wrapper -->
+    <div class="page-wrapper" id="main-wrapper" data-layout="vertical" data-navbarbg="skin6" data-sidebartype="full" data-sidebar-position="fixed" data-header-position="fixed">
+      <!-- Sidebar Start -->
+      <aside class="left-sidebar">
+        <!-- Sidebar scroll-->
+        <div>
+          <div class="brand-logo d-flex align-items-center justify-content-between mt-3">
+            <a href="./index.html" class="text-nowrap logo-img">
+              <img src="/assets/images/logos/zoondia.png" alt="" width="56%" />
+            </a>
+            <div class="close-btn d-xl-none d-block sidebartoggler cursor-pointer" id="sidebarCollapse">
+              <i class="fas fa-times fs-8"></i>
+            </div>
+          </div>
+          
+          <!-- Sidebar navigation-->
+          <nav class="sidebar-nav scroll-sidebar" data-simplebar="">
+            <ul id="sidebarnav">
+              <li class="nav-small-cap">
+                <i class="fas fa-ellipsis-h nav-small-cap-icon fs-6"></i>
+                <span class="hide-menu">Home</span>
+              </li>
+              <li class="sidebar-item">
+                <a class="sidebar-link" href="./index.html" aria-expanded="false">
+                  <i class="fas fa-tachometer-alt"></i>
+                  <span class="hide-menu">Dashboard</span>
+                </a>
+              </li>
+              <li class="nav-small-cap">
+                <i class="fas fa-ellipsis-h nav-small-cap-icon fs-6"></i>
+                <span class="hide-menu">Salary</span>
+              </li>
+              <li class="sidebar-item">
+                <a class="sidebar-link" href="./ui-buttons.html" aria-expanded="false">
+                  <i class="fas fa-dollar-sign"></i>
+                  <span class="hide-menu">Generate Salary</span>
+                </a>
+              </li>
+              <li class="sidebar-item">
+                <a class="sidebar-link" href="./ui-alerts.html" aria-expanded="false">
+                  <i class="fas fa-calendar-day"></i>
+                  <span class="hide-menu">Salary For This Month</span>
+                </a>
+              </li>
+              <li class="sidebar-item">
+                <a class="sidebar-link" href="./ui-card.html" aria-expanded="false">
+                  <i class="fas fa-credit-card"></i>
+                  <span class="hide-menu">View Salary Details</span>
+                </a>
+              </li>
+             
+              <li class="nav-small-cap">
+                <span class="hide-menu">Employees</span>
+              </li>
+              <li class="sidebar-item">
+                <a class="sidebar-link" href="./authentication-login.html" aria-expanded="false">
+                  <i class="fas fa-user-plus"></i>
+                  <span class="hide-menu">Add Employees</span>
+                </a>
+              </li>
+              <li class="sidebar-item">
+                <a class="sidebar-link" href="./authentication-register.html" aria-expanded="false">
+                  <i class="fas fa-users"></i>
+                  <span class="hide-menu">View Employees</span>
+                </a>
+              </li>
+              <li class="sidebar-item">
+                <a class="sidebar-link" href="./authentication-login.html" aria-expanded="false">
+                  <i class="fas fa-plus"></i>
+                  <span class="hide-menu">Add Bonus</span>
+                </a>
+              </li>
+              <li class="sidebar-item">
+                <a class="sidebar-link" href="./authentication-login.html" aria-expanded="false">
+                  <i class="fas fa-minus"></i>
+                  <span class="hide-menu">Add Reduction</span>
+                </a>
+              </li>
+              <li class="nav-small-cap">
+                <span class="hide-menu">EXTRAS</span>
+              </li>
+              <li class="sidebar-item">
+                <a class="sidebar-link" href="./icon-tabler.html" aria-expanded="false">
+                  <i class="fas fa-eye"></i>
+                  <span class="hide-menu">View Leave Request</span>
+                </a>
+              </li>
+              <li class="sidebar-item">
+                <a class="sidebar-link" href="./sample-page.html" aria-expanded="false">
+                  <i class="fas fa-sync-alt"></i>
+                  <span class="hide-menu">Update Leave Policy</span>
+                </a>
+              </li>
+              <li class="sidebar-item">
+                <a class="sidebar-link" href="./sample-page.html" aria-expanded="false">
+                  <i class="fas fa-star"></i>
+                  <span class="hide-menu">View Bonus</span>
+                </a>
+              </li>
+              <li class="sidebar-item">
+                <a class="sidebar-link" href="./sample-page.html" aria-expanded="false">
+                  <i class="fas fa-exclamation-triangle"></i>
+                  <span class="hide-menu">View Reduction</span>
+                </a>
+              </li>
+              <li class="sidebar-item">
+                <a class="sidebar-link" href="./authentication-login.html" aria-expanded="false">
+                  <i class="fas fa-sign-out-alt"></i> <!-- Logout icon -->
+                  <span class="hide-menu">Logout</span>
+                </a>
+              </li>
+              
+            </ul>
+          </nav>
+          <!-- End Sidebar navigation -->
+        </div>
+        <!-- End Sidebar scroll-->
+      </aside>
+      <!--  Sidebar End -->
+      <!--  Main wrapper -->
+      <div class="body-wrapper">
+        <!--  Header Start -->
+        <header class="app-header">
+          
+        </header>
+
+        <router-outlet></router-outlet>
+
+      </div>
+      <!-- End Main wrapper -->
+    </div>
+    <!-- End Body Wrapper -->
+  </body>
+</html>
