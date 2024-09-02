@@ -4,41 +4,41 @@
         <h5 class="card-title fw-semibold mb-4">Add Employee Form</h5>
         <div class="card">
           <div class="card-body">
-            <form>
+            <form (ngSubmit)="submit()">
               <div class="mb-3">
                 <label for="exampleInputEmail1" class="form-label">Enter Employee Name </label>
-                <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+                <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" name="name" [(ngModel)]="employee.name">
                 
               </div>
               <div class="mb-3">
                 <label for="exampleInputEmail1" class="form-label">Enter Employee Mail </label>
-                <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+                <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" name="mail" [(ngModel)]="employee.mail">
                 
               </div>
               <div class="mb-3">
                 <label for="exampleInputEmail1" class="form-label">Enter Employee Post </label>
-                <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+                <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" name="post" [(ngModel)]="employee.post">
                 
               </div>
               
               <div class="mb-3">
                 <label for="exampleInputEmail1" class="form-label">Enter Basic Pay </label>
-                <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+                <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" name="pay" [(ngModel)]="employee.pay">
                 
               </div>
               
               <div class="mb-3">
                 <label for="exampleInputEmail1" class="form-label">Create ZooHR ID </label>
-                <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+                <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" name="id" [(ngModel)]="employee.id">
                 
               </div>
               <div class="mb-3">
                 <label for="exampleInputPassword1" class="form-label">Create Password</label>
-                <input type="password" class="form-control" id="exampleInputPassword1">
+                <input type="password" class="form-control" id="exampleInputPassword1" name="password" [(ngModel)]="employee.password">
               </div>
               <div class="mb-3">
                 <label for="exampleInputPassword1" class="form-label">Retype Password</label>
-                <input type="password" class="form-control" id="exampleInputPassword1">
+                <input type="password" class="form-control" id="exampleInputPassword1" name="repassword" [(ngModel)]="employee.repassword">
               </div>
               
               <button type="submit" class="btn btn-primary text-uppercase">Submit</button>
