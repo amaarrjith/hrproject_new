@@ -8,6 +8,9 @@ import { AddbonusComponent } from './admin/addbonus/addbonus.component';
 import { AddreductionComponent } from './admin/addreduction/addreduction.component';
 import { SalaryMonthComponent } from './admin/salary-month/salary-month.component';
 import { ViewemployeesComponent } from './admin/viewemployees/viewemployees.component';
+import { EditemployeeComponent } from './admin/editemployee/editemployee.component';
+import { ViewbonusComponent } from './admin/viewbonus/viewbonus.component';
+import { ViewreductionComponent } from './admin/viewreduction/viewreduction.component';
 
 const routes: Routes = [
   {path:'',redirectTo:'login',pathMatch:'full'},
@@ -17,7 +20,10 @@ const routes: Routes = [
     {path:'addbonus',component:AddbonusComponent},
     {path:'addreduction',component:AddreductionComponent},
     {path:'salarymonth',component:SalaryMonthComponent},
-    {path:'viewemployees',component:ViewemployeesComponent}
+    {path:'viewemployees',component:ViewemployeesComponent},
+    {path:'editemployees/:id',component:EditemployeeComponent},
+    {path:'viewbonus',component:ViewbonusComponent},
+    {path:'viewreduction',component:ViewreductionComponent}
   ]},
   {path:'login',component:LoginComponent}
 ];

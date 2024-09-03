@@ -10,35 +10,37 @@
                 <thead>
                   <tr class="border-2 border-bottom border-primary border-0">
                     <th scope="col" class="ps-0">ID</th>
-                    <th scope="col">Employee Name</th>
-                    <th scope="col">Post</th>
-                    <th scope="col" class="text-center">Basic Pay</th>
-                    <th scope="col" class="text-center">Joined Date</th>
-                    <th scope="col" class="text-center">Email</th>
+                    <th scope="col" class="text-center">Employee Name</th>
+                    <th scope="col" class="text-center">Reduction Amount</th>
+                    <th scope="col" class="text-center">Reason</th>
+                    <th scope="col" class="text-center">Reduction Added On</th>
+                    <th scope="col" class="text-center">Reduction For Month</th>
+                    <th scope="col" class="text-center">Status</th>
                     <th scope="col" class="text-center"></th>
                     <th scope="col" class="text-center"></th>
                   </tr>
                 </thead>
                 <tbody class="table-group-divider ">
-                  <tr *ngFor="let data of employeeArray,let i = index">
+                  <tr *ngFor="let data of reductionArray,let i = index">
                     <th scope="row" class="ps-0 fw-medium">
                       <span class="table-link1 text-truncate d-block">{{i+1}}</span>
                     </th>
-                    <td>
-                      <span class="table-link1 text-truncate d-block">{{data.employee_name}}</span>
-                    </td>
-                    <td>
-                      <span class="table-link1 text-truncate d-block">{{data.post}}</span>
-                    </td>
-                    <td class="text-center fw-medium">{{data.base_package}}</td>
-                    <td class="text-center fw-medium">{{data.registered_date}}</td>
-                    <td class="text-center fw-medium">{{data.employee_mail}}</td>
                     <td class="text-center fw-medium">
+                      {{data.employee.employee_name}}
+                    </td>
+                    <td class="text-center fw-medium">
+                      {{data.reduction_amount}}
+                    </td>
+                    <td class="text-center fw-medium">{{data.reduction_reason}}</td>
+                    <td class="text-center fw-medium">{{data.added_on}}</td>
+                    <td class="text-center fw-medium">{{data.reduction_month.month_name}}</td>
+                    <td class="text-center fw-medium">{{data.status.status_name}}</td>
+                    <!-- <td class="text-center fw-medium">
                       <button class="btn btn-primary" (click)="edit(data.employee_id)">Edit</button>
                     </td>
                     <td class="text-center fw-medium">
                       <button class="btn btn-danger" (click)="delete(data.employee_id)">Delete</button>
-                    </td>
+                    </td> -->
                   </tr>
                 </tbody>
               </table>

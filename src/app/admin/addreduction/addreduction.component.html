@@ -4,27 +4,25 @@
         <h5 class="card-title fw-semibold mb-4">Add Reduction Form</h5>
         <div class="card">
           <div class="card-body">
-            <form>
+            <form (ngSubmit)="submit()">
                 <div class="mb-3">
                     <label for="employeeSelect" class="form-label">Choose Employee Name</label>
-                    <select class="form-select" id="employeeSelect" aria-label="Select employee">
+                    <select class="form-select" id="employeeSelect" aria-label="Select employee" name="employee" [(ngModel)]="reduction.employee">
                       <option value="" selected disabled>Select an employee</option>
                       <!-- Example options -->
-                      <option value="1">John Doe</option>
-                      <option value="2">Jane Smith</option>
-                      <option value="3">Emily Johnson</option>
-                      <!-- Add more options as needed -->
+                      <option *ngFor="let data of employeeArray" value="{{data.employee_id}}">{{data.employee_name}}</option>
+                      
                     </select>
                   </div>
                   
               <div class="mb-3">
                 <label for="exampleInputEmail1" class="form-label">Enter Amount  </label>
-                <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+                <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" name="amount" [(ngModel)]="reduction.amount">
                 
               </div>
               <div class="mb-3">
                 <label for="exampleInputEmail1" class="form-label">Enter Reason </label>
-                <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+                <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" name="reason" [(ngModel)]="reduction.reason">
                 
               </div>
               

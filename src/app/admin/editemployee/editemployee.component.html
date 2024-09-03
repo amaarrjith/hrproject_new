@@ -1,46 +1,43 @@
 <div class="container-fluid">
     <div class="card mt-5">
       <div class="card-body text-uppercase">
-        <h5 class="card-title fw-semibold mb-4">Add Employee Form</h5>
+        <h5 class="card-title fw-semibold mb-4">Edit Employee Form</h5>
         <div class="card">
           <div class="card-body">
             <form (ngSubmit)="submit()">
   <div class="mb-3">
-    <label for="employeeName" class="form-label">Enter Employee Name</label>
+    <label for="employeeName" class="form-label">Edit Employee Name</label>
     <input type="text" class="form-control" id="employeeName" name="name" [(ngModel)]="employee.name">
   </div>
   
   <div class="mb-3">
-    <label for="employeeMail" class="form-label">Enter Employee Mail</label>
+    <label for="employeeMail" class="form-label">Edit Employee Mail</label>
     <input type="email" class="form-control" id="employeeMail" name="mail" [(ngModel)]="employee.mail">
   </div>
   
   <div class="mb-3">
-    <label for="employeePost" class="form-label">Enter Employee Post</label>
+    <label for="employeePost" class="form-label">Edit Employee Post</label>
     <input type="text" class="form-control" id="employeePost" name="post" [(ngModel)]="employee.post">
   </div>
   
   <div class="mb-3">
-    <label for="basicPay" class="form-label">Enter Basic Pay</label>
+    <label for="basicPay" class="form-label">Edit Basic Pay</label>
     <input type="text" class="form-control" id="basicPay" name="pay" [(ngModel)]="employee.pay">
   </div>
   
   <div class="mb-3">
-    <label for="zooHRID" class="form-label">Create ZooHR ID</label>
+    <label for="zooHRID" class="form-label">Edit ZooHR ID</label>
     <input type="text" class="form-control" id="zooHRID" name="id" [(ngModel)]="employee.id">
   </div>
   
   <div class="mb-3">
-    <label for="employeePassword" class="form-label">Create Password</label>
+    <label for="employeePassword" class="form-label">Edit Password</label>
     <input type="password" class="form-control" id="employeePassword" name="password" [(ngModel)]="employee.password">
   </div>
   
-  <div class="mb-3">
-    <label for="retypePassword" class="form-label">Retype Password</label>
-    <input type="password" class="form-control" id="retypePassword" name="repassword" [(ngModel)]="employee.repassword">
-  </div>
   
-  <button type="submit" class="btn btn-primary text-uppercase">Submit</button>
+  
+  <button type="submit" class="btn btn-primary text-uppercase">Edit Employee</button>
 </form>
 
           </div>

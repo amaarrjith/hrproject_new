@@ -11,6 +11,10 @@ import { AddreductionComponent } from './admin/addreduction/addreduction.compone
 import { SalaryMonthComponent } from './admin/salary-month/salary-month.component';
 import { ViewemployeesComponent } from './admin/viewemployees/viewemployees.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { AddemployeeComponent } from './admin/addemployee/addemployee.component';
+import { EditemployeeComponent } from './admin/editemployee/editemployee.component';
+import { ViewbonusComponent } from './admin/viewbonus/viewbonus.component';
+import { ViewreductionComponent } from './admin/viewreduction/viewreduction.component';
 
 
 
@@ -24,6 +28,10 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
     AddreductionComponent,
     SalaryMonthComponent,
     ViewemployeesComponent,
+    AddemployeeComponent,
+    EditemployeeComponent,
+    ViewbonusComponent,
+    ViewreductionComponent
     
   ],
   imports: [
