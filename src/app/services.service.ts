@@ -42,5 +42,11 @@ export class ServicesService {
   getallReduction(){
     return this.http.get(`${this.baseUrl}reduction`)
   }
+  salary(){
+    return this.http.get(`${this.baseUrl}salary`)
+  }
+  viewSalary(){
+    return this.http.get(`${this.baseUrl}viewsalary`)
+  }
   
 }

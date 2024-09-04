@@ -11,6 +11,7 @@ import { ViewemployeesComponent } from './admin/viewemployees/viewemployees.comp
 import { EditemployeeComponent } from './admin/editemployee/editemployee.component';
 import { ViewbonusComponent } from './admin/viewbonus/viewbonus.component';
 import { ViewreductionComponent } from './admin/viewreduction/viewreduction.component';
+import { SalaryComponent } from './admin/salary/salary.component';
 
 const routes: Routes = [
   {path:'',redirectTo:'login',pathMatch:'full'},
@@ -23,7 +24,8 @@ const routes: Routes = [
     {path:'viewemployees',component:ViewemployeesComponent},
     {path:'editemployees/:id',component:EditemployeeComponent},
     {path:'viewbonus',component:ViewbonusComponent},
-    {path:'viewreduction',component:ViewreductionComponent}
+    {path:'viewreduction',component:ViewreductionComponent},
+    {path:'salary',component:SalaryComponent}
   ]},
   {path:'login',component:LoginComponent}
 ];

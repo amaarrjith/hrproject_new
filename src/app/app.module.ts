@@ -15,6 +15,7 @@ import { AddemployeeComponent } from './admin/addemployee/addemployee.component'
 import { EditemployeeComponent } from './admin/editemployee/editemployee.component';
 import { ViewbonusComponent } from './admin/viewbonus/viewbonus.component';
 import { ViewreductionComponent } from './admin/viewreduction/viewreduction.component';
+import { SalaryComponent } from './admin/salary/salary.component';
 
 
 
@@ -31,7 +32,8 @@ import { ViewreductionComponent } from './admin/viewreduction/viewreduction.comp
     AddemployeeComponent,
     EditemployeeComponent,
     ViewbonusComponent,
-    ViewreductionComponent
+    ViewreductionComponent,
+    SalaryComponent
     
   ],
   imports: [
