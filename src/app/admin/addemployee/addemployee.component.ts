@@ -35,8 +35,15 @@ export class AddemployeeComponent implements OnInit{
       employeeForm.append('id',this.employee.id)
       employeeForm.append('password',this.employee.password)
       this.services.addEmployees(employeeForm).subscribe((response:any)=>{
-        alert("Done")
-        location.reload()
+        console.log(response)
+        if (response.success === true){
+          alert("Done")
+          location.reload()
+        }
+        else if (response.Done === true){
+          alert("ZooHR ID Already Exists")
+        }
+       
       })
     }
   }

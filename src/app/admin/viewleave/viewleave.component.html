@@ -1,0 +1,55 @@
+<div class="container-fluid">
+    <div class="row">
+      
+      <div class="col-lg-12">
+        <div class="card mt-5">
+          <div class="card-body">
+            
+            <div class="table-responsive text-uppercase">
+              <table class="table text-nowrap align-middle mb-0">
+                <thead>
+                  <tr class="border-2 border-bottom border-primary border-0">
+                    <th scope="col" class="ps-0">ID</th>
+                    <th scope="col" class="text-center">Employee Name</th>
+                    <th scope="col" class="text-center">Leave Requested For</th>
+                    <th scope="col" class="text-center">Reason</th>
+                    <th scope="col" class="text-center">Status</th>
+                    <th scope="col" class="text-center"></th>
+                  </tr>
+                </thead>
+                <tbody class="table-group-divider ">
+                  <tr *ngFor="let data of requestArray,let i = index">
+                    <th scope="row" class="ps-0 fw-medium">
+                      <span class="table-link1 text-truncate d-block">{{i+1}}</span>
+                    </th>
+                    <td class="text-center fw-medium">
+                      {{data.employee.employee_name}}
+                    </td>
+                    <td class="text-center fw-medium">
+                      {{data.leave_date}}
+                    </td>
+                    <td class="text-center fw-medium">{{data.reason.leave_name}}</td>
+                    <td class="text-center fw-medium">{{data.status.status_name}}</td>
+                    <td class="text-center fw-medium">
+                      <button *ngIf="data.status.status_id === 3" class="btn btn-success" (click)="approve(data.employee.employee_id,data.leave_id)">Approve</button>
+                    </td>
+                    <td class="text-center fw-medium">
+                        <button *ngIf="data.status.status_id === 3" class="btn btn-danger" (click)="decline(data.employee.employee_id)">Decline</button>
+                    </td>
+                    <td class="text-center fw-medium">
+                        <span *ngIf="data.status.status_id === 4" class="material-icons" style="color: green;">check_circle</span>
+                        <span *ngIf="data.status.status_id === 5" class="material-icons" style="color: red;">block</span>
+                    </td>
+                   
+                        
+                    
+                    
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            
+            </div>
+          </div>
+        </div>
+      </div>

@@ -16,6 +16,10 @@ import { EditemployeeComponent } from './admin/editemployee/editemployee.compone
 import { ViewbonusComponent } from './admin/viewbonus/viewbonus.component';
 import { ViewreductionComponent } from './admin/viewreduction/viewreduction.component';
 import { SalaryComponent } from './admin/salary/salary.component';
+import { ViewleaveComponent } from './admin/viewleave/viewleave.component';
+import { UpdateleaveComponent } from './admin/updateleave/updateleave.component';
+import { UpdatepolicyComponent } from './admin/updatepolicy/updatepolicy.component';
+import { ViewsalaryComponent } from './admin/viewsalary/viewsalary.component';
 
 
 
@@ -33,7 +37,11 @@ import { SalaryComponent } from './admin/salary/salary.component';
     EditemployeeComponent,
     ViewbonusComponent,
     ViewreductionComponent,
-    SalaryComponent
+    SalaryComponent,
+    ViewleaveComponent,
+    UpdateleaveComponent,
+    UpdatepolicyComponent,
+    ViewsalaryComponent
     
   ],
   imports: [

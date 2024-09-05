@@ -12,15 +12,29 @@ export class SalaryComponent implements OnInit{
   constructor(private services:ServicesService){}
   ngOnInit(): void {
     this.services.salary().subscribe((response:any)=>{
-      
+      this.services.viewSalary().subscribe((response:any)=>{
+        this.salaryArray = response
+        console.log(this.salaryArray)
+      })
     })
-    this.services.viewSalary().subscribe((response:any)=>{
-      this.salaryArray = response
-      console.log(this.salaryArray)
+    
+  }
+
+  generate(id:any){
+    this.services.generateSalary(id).subscribe((response:any)=>{
+      alert("Generated")
+      location.reload()
+    })
+  }
+  generateall(){
+    this.services.generatesalaryAll().subscribe((response:any)=>{
+      alert("Generated For All Employees")
+      location.reload()
     })
   }
 
-  edit(id:any){}
-  delete(id:any){}
+  refresh(){
+    location.reload()
+  }
   
 }

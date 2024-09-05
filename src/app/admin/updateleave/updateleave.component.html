@@ -1,0 +1,58 @@
+<div class="container-fluid">
+    <div class="row">
+      
+      <div class="col-lg-12">
+        <div class="card mt-5">
+          <div class="card-body">
+            
+            
+            <div class="table-responsive text-uppercase mb-4">
+              <table class="table text-nowrap align-middle mb-0">
+                <thead>
+                  <tr class="border-2 border-bottom border-primary border-0">
+                    <th scope="col" class="text-center">Casual Leave Per Year</th>
+                    <th scope="col" class="text-center">Sick Leave Per Year</th>
+                    <th scope="col" class="text-center">Half Days Per Year</th>
+                  </tr>
+                </thead>
+                <tbody class="table-group-divider">
+                  <tr *ngFor="let data of yearstatusArray; let i = index">
+                    <td class="text-center fw-medium">{{ data.casual_leaves }}</td>
+                    <td class="text-center fw-medium">{{ data.sick_leaves }}</td>
+                    <td class="text-center fw-medium">{{ data.half_day_leaves }}</td>
+                  </tr>
+                </tbody>
+              </table>
+              
+            </div>
+            
+            
+            <div class="table-responsive text-uppercase">
+              <table class="table text-nowrap align-middle mb-0">
+                <thead>
+                  <tr class="border-2 border-bottom border-primary border-0">
+                    <th scope="col" class="text-center">Casual Leave Per Month</th>
+                    <th scope="col" class="text-center">Sick Leave Per Month</th>
+                    <th scope="col" class="text-center">Half Days Per Month</th>
+                  </tr>
+                </thead>
+                <tbody class="table-group-divider">
+                  <tr *ngFor="let data of monthstatusArray; let i = index">
+                    <td class="text-center fw-medium">{{ data.casual_leaves }}</td>
+                    <td class="text-center fw-medium">{{ data.sick_leaves }}</td>
+                    <td class="text-center fw-medium">{{ data.half_day_leaves }}</td>
+                  </tr>
+                </tbody>
+              </table>
+              
+              <div class="text-center mt-4">
+                <button (click)="update()" class="btn btn-success">Update Policy</button>
+              </div>
+            </div>
+  
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  

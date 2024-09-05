@@ -36,18 +36,13 @@
                     <td class="fw-medium">{{data.leave_reductions}}</td>
                     <td class="fw-medium">{{data.generated_salary}}</td>
                     <td class="fw-medium">{{data.status.status_name}}</td>
-                    <td class="fw-medium" *ngIf="data.status.status_id===1">
-                      <button class="btn btn-success" (click)="generate(data.employee.employee_id)">Generate Salary</button>
-                    </td>
+                    
                     
                   </tr>
                 </tbody>
               </table>
             </div>
-            <div class="text-center mt-3">
-              <button class="btn btn-success" (click)="generateall()">Generate Salary for all employees</button>
-              <button class="btn btn-primary m-2" (click)="refresh()">Refresh</button>
-            </div>
+            
           </div>
         </div>
       </div>

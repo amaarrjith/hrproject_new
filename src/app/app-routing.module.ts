@@ -12,6 +12,10 @@ import { EditemployeeComponent } from './admin/editemployee/editemployee.compone
 import { ViewbonusComponent } from './admin/viewbonus/viewbonus.component';
 import { ViewreductionComponent } from './admin/viewreduction/viewreduction.component';
 import { SalaryComponent } from './admin/salary/salary.component';
+import { ViewleaveComponent } from './admin/viewleave/viewleave.component';
+import { UpdateleaveComponent } from './admin/updateleave/updateleave.component';
+import { UpdatepolicyComponent } from './admin/updatepolicy/updatepolicy.component';
+import { ViewsalaryComponent } from './admin/viewsalary/viewsalary.component';
 
 const routes: Routes = [
   {path:'',redirectTo:'login',pathMatch:'full'},
@@ -25,7 +29,11 @@ const routes: Routes = [
     {path:'editemployees/:id',component:EditemployeeComponent},
     {path:'viewbonus',component:ViewbonusComponent},
     {path:'viewreduction',component:ViewreductionComponent},
-    {path:'salary',component:SalaryComponent}
+    {path:'salary',component:SalaryComponent},
+    {path:'viewleave',component:ViewleaveComponent},
+    {path:'updateleave',component:UpdateleaveComponent},
+    {path:'updatepolicy',component:UpdatepolicyComponent},
+    {path:'viewsalary',component:ViewsalaryComponent}
   ]},
   {path:'login',component:LoginComponent}
 ];

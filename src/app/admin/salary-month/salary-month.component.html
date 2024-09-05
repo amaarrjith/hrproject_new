@@ -7,19 +7,18 @@
             <form>
                 <div class="mb-3">
                     <label for="employeeSelect" class="form-label">Choose Employee Name</label>
-                    <select class="form-select" id="employeeSelect" aria-label="Select employee">
+                    <select class="form-select" id="employeeSelect" aria-label="Select employee" name="name" [(ngModel)]="employee.name">
                       <option value="" selected disabled>Select an employee</option>
-                      <!-- Example options -->
-                      <option value="1">John Doe</option>
-                      <option value="2">Jane Smith</option>
-                      <option value="3">Emily Johnson</option>
-                      <!-- Add more options as needed -->
+                      
+                      <option *ngFor="let data of employeeArray" value="{{data.employee_id}}">{{data.employee_name}}</option>
+                      
+                      
                     </select>
                   </div>
                   
               
               
-              <button type="submit" class="btn btn-primary text-uppercase">Submit</button>
+              <button type="submit" (click)="generate()" class="btn btn-primary text-uppercase">Generate</button>
             </form>
           </div>
         </div>

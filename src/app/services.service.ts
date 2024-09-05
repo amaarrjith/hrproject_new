@@ -1,4 +1,5 @@
 import { HttpClient } from '@angular/common/http';
+import { HtmlParser } from '@angular/compiler';
 import { Injectable } from '@angular/core';
 import { Form } from '@angular/forms';
 
@@ -48,5 +49,31 @@ export class ServicesService {
   viewSalary(){
     return this.http.get(`${this.baseUrl}viewsalary`)
   }
-  
+  generateSalary(id:any){
+    return this.http.get(`${this.baseUrl}generatesalary/${id}`)
+  }
+  generatesalaryAll(){
+    return this.http.get(`${this.baseUrl}generatesalary`)
+  }
+  leaveRequests(leaveForm:FormData){
+    return this.http.post(`${this.baseUrl}leaverequests`,leaveForm)
+  }
+  getallleaveRequests(){
+    return this.http.get(`${this.baseUrl}leaverequests`)
+  }
+  approveLeave(id:any,leave_id:any){
+    return this.http.get(`${this.baseUrl}approveleave/${id}/${leave_id}`)
+  }
+  declineLeave(id:any){
+    return this.http.get(`${this.baseUrl}declineleave/${id}`)
+  }
+  viewleaveStatus(){
+    return this.http.get(`${this.baseUrl}leavestatus`)
+  }
+  updatePolicy(updatePolicy:FormData){
+    return this.http.post(`${this.baseUrl}leavestatus`,updatePolicy)
+  }
+  generateSalaryMonth(salarymonthForm:FormData){
+    return this.http.post(`${this.baseUrl}generatesalarymonth`,salarymonthForm)
+  }
 }
