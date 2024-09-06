@@ -1,0 +1,48 @@
+<div class="container-fluid">
+    <div class="row">
+      
+      <div class="col-lg-12">
+        <div class="card mt-5">
+          <div class="card-body">
+            
+            <div class="table-responsive text-uppercase">
+              <table class="table text-nowrap align-middle mb-0">
+                <thead>
+                  <tr class="border-2 border-bottom border-primary border-0">
+                    <th scope="col" class="ps-0">ID</th>
+                    <th scope="col" class="text-center">Bonus Amount</th>
+                    <th scope="col" class="text-center">Reason</th>
+                    <th scope="col" class="text-center">Bonus Added On</th>
+                    <th scope="col" class="text-center">Bonus For Month</th>
+                    <th scope="col" class="text-center">Status</th>
+                    <th scope="col" class="text-center"></th>
+                    <th scope="col" class="text-center"></th>
+                  </tr>
+                </thead>
+                <tbody class="table-group-divider ">
+                  <tr *ngFor="let data of bonusArray,let i = index">
+                    <th scope="row" class="ps-0 fw-medium">
+                      <span class="table-link1 text-truncate d-block">{{i+1}}</span>
+                    </th>
+                    <td class="text-center fw-medium">
+                      {{data.bonus_amount}}
+                    </td>
+                    <td class="text-center fw-medium">{{data.bonus_reason}}</td>
+                    <td class="text-center fw-medium">{{data.added_on}}</td>
+                    <td class="text-center fw-medium">{{data.bonus_month.month_name}}</td>
+                    <td class="text-center fw-medium">{{data.status.status_name}}</td>
+                    <!-- <td class="text-center fw-medium">
+                      <button class="btn btn-primary" (click)="edit(data.employee_id)">Edit</button>
+                    </td>
+                    <td class="text-center fw-medium">
+                      <button class="btn btn-danger" (click)="delete(data.employee_id)">Delete</button>
+                    </td> -->
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            
+            </div>
+          </div>
+        </div>
+      </div>

@@ -1,0 +1,29 @@
+<div class="container-fluid">
+    <div class="card mt-5">
+      <div class="card-body text-uppercase">
+        <h5 class="card-title fw-semibold mb-4">Contact Admin Form</h5>
+        <div class="card">
+          <div class="card-body">
+            <form (ngSubmit)="submit()" enctype="multipart/form-data">
+              <div class="mb-3">
+                <label for="subject" class="form-label">Enter Subject</label>
+                <input type="text" class="form-control" id="subject" name="subject" [(ngModel)]="contact.subject">
+              </div>
+              
+              <div class="mb-3">
+                <label for="description" class="form-label">Description</label>
+                <textarea class="form-control" id="description" name="description" rows="4" [(ngModel)]="contact.description"></textarea>
+              </div>
+
+              <div class="mb-3">
+                <label for="fileUpload" class="form-label">Upload File (IF ANY)</label>
+                <input type="file" class="form-control" id="fileUpload" name="file" (change)="onFileChange($event)">
+              </div>
+              
+              <button type="submit" class="btn btn-primary text-uppercase">Submit</button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+</div>

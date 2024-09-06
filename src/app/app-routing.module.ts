@@ -16,6 +16,16 @@ import { ViewleaveComponent } from './admin/viewleave/viewleave.component';
 import { UpdateleaveComponent } from './admin/updateleave/updateleave.component';
 import { UpdatepolicyComponent } from './admin/updatepolicy/updatepolicy.component';
 import { ViewsalaryComponent } from './admin/viewsalary/viewsalary.component';
+import { EmployeemainComponent } from './employee/employeemain/employeemain.component';
+import { EmployeeindexComponent } from './employee/employeeindex/employeeindex.component';
+import { ViewemployeeleaveComponent } from './employee/viewemployeeleave/viewemployeeleave.component';
+import { LeaverequestComponent } from './employee/leaverequest/leaverequest.component';
+import { EmployeesalaryComponent } from './employee/employeesalary/employeesalary.component';
+import { EmployeeleavestatusComponent } from './employee/employeeleavestatus/employeeleavestatus.component';
+import { EmployeebonusComponent } from './employee/employeebonus/employeebonus.component';
+import { EmployeereductionComponent } from './employee/employeereduction/employeereduction.component';
+import { ContactadminComponent } from './employee/contactadmin/contactadmin.component';
+import { EmpleavereductionComponent } from './employee/empleavereduction/empleavereduction.component';
 
 const routes: Routes = [
   {path:'',redirectTo:'login',pathMatch:'full'},
@@ -34,6 +44,17 @@ const routes: Routes = [
     {path:'updateleave',component:UpdateleaveComponent},
     {path:'updatepolicy',component:UpdatepolicyComponent},
     {path:'viewsalary',component:ViewsalaryComponent}
+  ]},
+  {path:'employeemain',component:EmployeemainComponent,children:[
+    {path:'employeeindex',component:EmployeeindexComponent},
+    {path:'viewemployeeleave',component:ViewemployeeleaveComponent},
+    {path:'leaverequest',component:LeaverequestComponent},
+    {path:'employeesalary',component:EmployeesalaryComponent},
+    {path:'employeeleavestatus',component:EmployeeleavestatusComponent},
+    {path:'employeebonus',component:EmployeebonusComponent},
+    {path:'employeereduction',component:EmployeereductionComponent},
+    {path:'contactadmin',component:ContactadminComponent},
+    {path:'empleavereduction',component:EmpleavereductionComponent}
   ]},
   {path:'login',component:LoginComponent}
 ];

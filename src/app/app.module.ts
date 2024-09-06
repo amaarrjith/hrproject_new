@@ -20,6 +20,16 @@ import { ViewleaveComponent } from './admin/viewleave/viewleave.component';
 import { UpdateleaveComponent } from './admin/updateleave/updateleave.component';
 import { UpdatepolicyComponent } from './admin/updatepolicy/updatepolicy.component';
 import { ViewsalaryComponent } from './admin/viewsalary/viewsalary.component';
+import { EmployeemainComponent } from './employee/employeemain/employeemain.component';
+import { EmployeeindexComponent } from './employee/employeeindex/employeeindex.component';
+import { ViewemployeeleaveComponent } from './employee/viewemployeeleave/viewemployeeleave.component';
+import { LeaverequestComponent } from './employee/leaverequest/leaverequest.component';
+import { EmployeesalaryComponent } from './employee/employeesalary/employeesalary.component';
+import { EmployeeleavestatusComponent } from './employee/employeeleavestatus/employeeleavestatus.component';
+import { EmployeebonusComponent } from './employee/employeebonus/employeebonus.component';
+import { EmployeereductionComponent } from './employee/employeereduction/employeereduction.component';
+import { ContactadminComponent } from './employee/contactadmin/contactadmin.component';
+import { EmpleavereductionComponent } from './employee/empleavereduction/empleavereduction.component';
 
 
 
@@ -41,7 +51,17 @@ import { ViewsalaryComponent } from './admin/viewsalary/viewsalary.component';
     ViewleaveComponent,
     UpdateleaveComponent,
     UpdatepolicyComponent,
-    ViewsalaryComponent
+    ViewsalaryComponent,
+    EmployeemainComponent,
+    EmployeeindexComponent,
+    ViewemployeeleaveComponent,
+    LeaverequestComponent,
+    EmployeesalaryComponent,
+    EmployeeleavestatusComponent,
+    EmployeebonusComponent,
+    EmployeereductionComponent,
+    ContactadminComponent,
+    EmpleavereductionComponent
     
   ],
   imports: [

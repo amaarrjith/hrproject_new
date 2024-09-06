@@ -14,7 +14,9 @@ export class SalaryComponent implements OnInit{
     this.services.salary().subscribe((response:any)=>{
       this.services.viewSalary().subscribe((response:any)=>{
         this.salaryArray = response
-        console.log(this.salaryArray)
+        this.services.getLeavereductions().subscribe((response:any)=>{
+          
+        })
       })
     })
     

@@ -37,9 +37,12 @@ export class LoginComponent implements OnInit{
         this.router.navigate(['/main/index'])
       }
       if(response.success === true){
-        sessionStorage.setItem('guestID',this.login.username)
-        this.router.navigate([''])
+        const guestID = response.employeeID
+        sessionStorage.setItem('guestID',guestID)
+        sessionStorage.setItem('guestusername',this.login.username)
+        this.router.navigate(['/employeemain/employeeindex'])
       }
+      
     })
   }
 }

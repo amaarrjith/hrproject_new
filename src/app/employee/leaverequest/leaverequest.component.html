@@ -1,0 +1,31 @@
+<div class="container-fluid">
+    <div class="card mt-5">
+      <div class="card-body text-uppercase">
+        <h5 class="card-title fw-semibold mb-4">Leave Request Form</h5>
+        <div class="card">
+          <div class="card-body">
+            <form (ngSubmit)="submit()">
+              
+              
+              <!-- New Fields -->
+              <div class="mb-3">
+                <label for="leaveDate" class="form-label">Choose Date</label>
+                <input type="date" class="form-control" id="leaveDate" name="date" [(ngModel)]="employee.leaveDate">
+              </div>
+              
+              <div class="mb-3">
+                <label for="leaveReason" class="form-label">Choose Reason</label>
+                <select class="form-select" id="leaveReason" name="reason" [(ngModel)]="employee.reason">
+                  <option value="" disabled selected>Select a reason</option>
+                  <option *ngFor="let data of reasonArray" [value]="data.leave_id">{{data.leave_name}}</option>
+                </select>
+              </div>
+  
+              <button type="submit" class="btn btn-primary text-uppercase">Submit</button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  

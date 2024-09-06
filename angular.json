@@ -30,7 +30,12 @@
               "src/assets"
             ],
             "styles": [
-              "src/styles.scss"
+              "src/styles.scss",
+              "src/assets/employee/css/bootstrap.css",
+              "src/assets/employee/css/app.css",
+              "src/assets/employee/vendors/iconly/bold.css",
+              "src/assets/employee/vendors/perfect-scrollbar/perfect-scrollbar.css",
+              "src/assets/employee/vendors/bootstrap-icons/bootstrap-icons.css"
             ],
             "scripts": []
           },

@@ -1,0 +1,56 @@
+<div class="container-fluid">
+    <div class="row">
+      
+      <div class="col-lg-12">
+        <div class="card mt-5">
+          <div class="card-body">
+            
+            
+            <div class="table-responsive text-uppercase mb-4">
+              <table class="table text-nowrap align-middle mb-0">
+                <thead>
+                  <tr class="border-2 border-bottom border-primary border-0">
+                    <th scope="col" class="text-center">Remaining Casual Leave This Year</th>
+                    <th scope="col" class="text-center">Remaining Sick Leave This Year</th>
+                    <th scope="col" class="text-center">Remaining Half Days This Year</th>
+                  </tr>
+                </thead>
+                <tbody class="table-group-divider">
+                  <tr *ngIf="statusArray">
+                    <td class="text-center fw-medium">{{ statusArray.clYear }}</td>
+                    <td class="text-center fw-medium">{{ statusArray.slYear }}</td>
+                    <td class="text-center fw-medium">{{ statusArray.halfYear }}</td>
+                  </tr>
+                </tbody>
+              </table>
+              
+            </div>
+            
+            
+            <div class="table-responsive text-uppercase">
+              <table class="table text-nowrap align-middle mb-0">
+                <thead>
+                  <tr class="border-2 border-bottom border-primary border-0">
+                    <th scope="col" class="text-center">Remaining Casual Leave This Month</th>
+                    <th scope="col" class="text-center">Remaining Sick Leave This Month</th>
+                    <th scope="col" class="text-center">Remaining Half Days This Month</th>
+                  </tr>
+                </thead>
+                <tbody class="table-group-divider">
+                    <tr *ngIf="statusArray">
+                    <td class="text-center fw-medium">{{ statusArray.clMonth }}</td>
+                    <td class="text-center fw-medium">{{ statusArray.slMonth }}</td>
+                    <td class="text-center fw-medium">{{ statusArray.halfMonth }}</td>
+                  </tr>
+                </tbody>
+              </table>
+              
+              
+            </div>
+  
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  

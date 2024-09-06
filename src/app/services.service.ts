@@ -76,4 +76,31 @@ export class ServicesService {
   generateSalaryMonth(salarymonthForm:FormData){
     return this.http.post(`${this.baseUrl}generatesalarymonth`,salarymonthForm)
   }
+  viewEmployeeleave(id:any){
+    return this.http.get(`${this.baseUrl}leaverequests/${id}`)
+  }
+  getallLeavetype(){
+    return this.http.get(`${this.baseUrl}getallleavetype`)
+  }
+  addLeaverequest(reasonForm:FormData,guestID:any){
+    return this.http.post(`${this.baseUrl}leaverequests/${guestID}`,reasonForm)
+  }
+  salaryEmployee(id:any){
+    return this.http.get(`${this.baseUrl}viewsalary/${id}`)
+  }
+  viewemployeeBonus(id:any){
+    return this.http.get(`${this.baseUrl}bonus/${id}`)
+  }
+  viewemployeeReductions(id:any){
+    return this.http.get(`${this.baseUrl}reduction/${id}`)
+  }
+  remainLeave(id:any){
+    return this.http.get(`${this.baseUrl}remainingleave/${id}`)
+  }
+  getLeavereductions(){
+    return this.http.get(`${this.baseUrl}leavereductions`)
+  }
+  getLeavereductionsbyID(id:any){
+    return this.http.get(`${this.baseUrl}leavereductions/${id}`)
+  }
 }
