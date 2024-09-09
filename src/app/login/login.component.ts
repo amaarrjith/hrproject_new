@@ -17,17 +17,22 @@ export class LoginComponent implements OnInit{
     
   }
   submit(){
-    const userID = document.getElementById('userid') as HTMLInputElement
-    const passID = document.getElementById('passid') as HTMLInputElement
-    if (this.login.username === ''){
-      userID.placeholder = 'Enter Username To Proceed'
-      userID.classList.add('error')
+    if (this.login.username === '' || this.login.password === ''){
+      alert("Enter Username and Password To Proceed")
+      const userID = document.getElementById('userid') as HTMLInputElement
+      const passID = document.getElementById('passid') as HTMLInputElement
+      if (this.login.username === ''){
+        userID.placeholder = 'Enter Username To Proceed'
+        userID.classList.add('error')
+      }
+      
+      if(this.login.password === ''){
+        passID.placeholder = 'Enter Password To Proceed'
+        passID.classList.add('error')
+      }
     }
+    else{
     
-    if(this.login.password === ''){
-      passID.placeholder = 'Enter Password To Proceed'
-      passID.classList.add('error')
-    }
     const loginForm = new FormData()
     loginForm.append('username',this.login.username)
     loginForm.append('password',this.login.password)
@@ -36,13 +41,17 @@ export class LoginComponent implements OnInit{
         sessionStorage.setItem('adminID',this.login.username)
         this.router.navigate(['/main/index'])
       }
-      if(response.success === true){
+      else if(response.success === true){
         const guestID = response.employeeID
         sessionStorage.setItem('guestID',guestID)
         sessionStorage.setItem('guestusername',this.login.username)
         this.router.navigate(['/employeemain/employeeindex'])
       }
+      else if(response.failure === true){
+        alert("Invalid LoginID or Password")
+      }
       
     })
+  }
   }
 }

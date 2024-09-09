@@ -103,4 +103,16 @@ export class ServicesService {
   getLeavereductionsbyID(id:any){
     return this.http.get(`${this.baseUrl}leavereductions/${id}`)
   }
+  forgetPassword(forgetPassword:FormData){
+    return this.http.post(`${this.baseUrl}forgetpassword`,forgetPassword)
+  }
+  submitOtp(otpForm:FormData,id:any){
+    return this.http.post(`${this.baseUrl}otpvalidation/${id}`,otpForm)
+  }
+  changePassword(passwordForm:FormData,employeeID:any){
+    return this.http.post(`${this.baseUrl}changepassword/${employeeID}`,passwordForm)
+  }
+  contactAdmin(contactForm:FormData,id:any){
+    return this.http.post(`${this.baseUrl}contactform/${id}`,contactForm)
+  }
 }

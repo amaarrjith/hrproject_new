@@ -26,6 +26,9 @@ import { EmployeebonusComponent } from './employee/employeebonus/employeebonus.c
 import { EmployeereductionComponent } from './employee/employeereduction/employeereduction.component';
 import { ContactadminComponent } from './employee/contactadmin/contactadmin.component';
 import { EmpleavereductionComponent } from './employee/empleavereduction/empleavereduction.component';
+import { ValidationComponent } from './forgetpassword/validation/validation.component';
+import { EnterotpComponent } from './forgetpassword/enterotp/enterotp.component';
+import { ChangepasswordComponent } from './forgetpassword/changepassword/changepassword.component';
 
 const routes: Routes = [
   {path:'',redirectTo:'login',pathMatch:'full'},
@@ -56,7 +59,10 @@ const routes: Routes = [
     {path:'contactadmin',component:ContactadminComponent},
     {path:'empleavereduction',component:EmpleavereductionComponent}
   ]},
-  {path:'login',component:LoginComponent}
+  {path:'login',component:LoginComponent},
+  {path:'forgetpassword/validation',component:ValidationComponent},
+  {path:'forgetpassword/enterotp',component:EnterotpComponent},
+  {path:'forgetpassword/changepassword',component:ChangepasswordComponent}
 ];
 
 @NgModule({
