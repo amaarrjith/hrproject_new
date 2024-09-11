@@ -29,6 +29,9 @@ import { EmpleavereductionComponent } from './employee/empleavereduction/empleav
 import { ValidationComponent } from './forgetpassword/validation/validation.component';
 import { EnterotpComponent } from './forgetpassword/enterotp/enterotp.component';
 import { ChangepasswordComponent } from './forgetpassword/changepassword/changepassword.component';
+import { ViewmessagesComponent } from './admin/viewmessages/viewmessages.component';
+import { ViewmessagebyidComponent } from './admin/viewmessagebyid/viewmessagebyid.component';
+import { AddpolicyComponent } from './addpolicy/addpolicy.component';
 
 const routes: Routes = [
   {path:'',redirectTo:'login',pathMatch:'full'},
@@ -46,7 +49,9 @@ const routes: Routes = [
     {path:'viewleave',component:ViewleaveComponent},
     {path:'updateleave',component:UpdateleaveComponent},
     {path:'updatepolicy',component:UpdatepolicyComponent},
-    {path:'viewsalary',component:ViewsalaryComponent}
+    {path:'viewsalary',component:ViewsalaryComponent},
+    {path:'viewmessages',component:ViewmessagesComponent},
+    {path:'viewmessagebyid/:id',component:ViewmessagebyidComponent}
   ]},
   {path:'employeemain',component:EmployeemainComponent,children:[
     {path:'employeeindex',component:EmployeeindexComponent},
@@ -62,7 +67,8 @@ const routes: Routes = [
   {path:'login',component:LoginComponent},
   {path:'forgetpassword/validation',component:ValidationComponent},
   {path:'forgetpassword/enterotp',component:EnterotpComponent},
-  {path:'forgetpassword/changepassword',component:ChangepasswordComponent}
+  {path:'forgetpassword/changepassword',component:ChangepasswordComponent},
+  {path:'addpolicy',component:AddpolicyComponent}
 ];
 
 @NgModule({

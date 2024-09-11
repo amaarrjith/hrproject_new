@@ -13,6 +13,7 @@ export class ViewemployeesComponent implements OnInit{
   ngOnInit(): void {
     this.services.getallEmployees().subscribe((response:any)=>{
       this.employeeArray = response
+      console.log(this.employeeArray)
     })
   }
   delete(id:any){
@@ -25,6 +26,20 @@ export class ViewemployeesComponent implements OnInit{
   edit(id:any){
     console.log(id)
     this.router.navigate(['main/editemployees',id])
+  }
+
+  block(id:any){
+    this.services.blockEmployee(id).subscribe((response:any)=>{
+      alert("Employee Blocked")
+      location.reload()
+    })
+  }
+
+  unblock(id:any){
+    this.services.unblockEmployee(id).subscribe((response:any)=>{
+      alert("Employee Unblocked")
+      location.reload()
+    })
   }
 
 }

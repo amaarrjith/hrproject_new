@@ -21,12 +21,17 @@ export class AddbonusComponent implements OnInit{
   }
 
   submit(){
+    if(!this.bonus.employee || !this.bonus.amount || !this.bonus.reason){
+      alert("Enter All Values To Proceed")
+      return;
+    }
     const bonusForm = new FormData()
     bonusForm.append('employee',this.bonus.employee)
     bonusForm.append('amount',this.bonus.amount)
     bonusForm.append('reason',this.bonus.reason)
     this.services.addBonus(bonusForm).subscribe((response:any)=>{
       alert("Bonus Added To Employee")
+      location.reload()
     })
 
     

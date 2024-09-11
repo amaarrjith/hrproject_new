@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Message Details</title>
+    
+</head>
+<body>
+    <div class="container mt-5">
+        <div class="card">
+            <div class="card-header p-3 text-center">
+                <h4 class="mb-0">Message Details</h4>
+            </div>
+            <div class="card-body mt-5 p-5">
+                <!-- Sender Information -->
+                <div class="mb-3">
+                    <h6 class="message-subtitle">From : <span class="message-content">{{messageArray[0].employee.employee_name}}</span></h6>
+                </div>
+                <!-- Message Subject -->
+                <div class="mb-3">
+                    <h6 class="message-subtitle">Subject : <span class="message-content">{{messageArray[0].subject}}</span></h6>
+                </div>
+                <!-- Message Description -->
+                <div class="mb-3">
+                    <h6 class="message-subtitle">Description :</h6>
+                    <p class="message-content">{{messageArray[0].description}}</p>
+                </div>
+                <!-- Attached Files -->
+                <div class="mb-3">
+                    <h6 class="message-subtitle">Attachments :</h6>
+                    <ul class="list-unstyled attachment-list">
+                        <li *ngIf="messageArray[0].file;else noAttachment">
+                            <span class="message-content"><a href="{{messageArray[0].file}}">View Attachment</a></span>
+                        </li>
+                    </ul>
+                    <ng-template #noAttachment>
+                        <p class="no-attachment">No attachments attached.</p>
+                    </ng-template>
+                </div>
+            </div>
+            <div class="card-footer">
+                <a href="javascript:history.back()" class="btn btn-secondary">Back</a>
+            </div>
+        </div>
+    </div>
+    <!-- Link to Bootstrap JS for interactive components -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.2/dist/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>

@@ -1,0 +1,77 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>SeoDash Free Bootstrap Admin Template by Adminmart</title>
+  <link rel="shortcut icon" type="image/png" href="/assets/images/logos/seodashlogo.png" />
+  <link rel="stylesheet" href="/assets/css/styles.min.css" />
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/5.1.3/css/bootstrap.min.css" />
+  <style>
+    .center-card {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+
+    .card-custom {
+      max-width: 600px;
+      width: 100%;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="container-fluid center-card">
+    <div class="card card-custom mt-5">
+        <div class="img text-center">
+            <img src="/assets/images/logos/zoondia.png" alt="" width="30%" />
+        </div>
+        
+      <div class="card-body text-uppercase">
+        
+        <form (ngSubmit)="submit()">
+          <div class="mb-3">
+            <label for="casualYr" class="form-label">Enter Casual Leave Per Year </label>
+            <input type="text" class="form-control" id="casualYr" name="casualyr" [(ngModel)]="leave.casualyr">
+          </div>
+
+          <div class="mb-3">
+            <label for="sickYr" class="form-label">Enter Sick Leave Per Year </label>
+            <input type="text" class="form-control" id="sickYr" name="sickyr" [(ngModel)]="leave.sickyr">
+          </div>
+
+          <div class="mb-3">
+            <label for="halfYr" class="form-label">Enter Half Leaves Per Year </label>
+            <input type="text" class="form-control" id="halfYr" name="halfyr" [(ngModel)]="leave.halfyr">
+          </div>
+
+          <div class="mb-3">
+            <label for="casualMonth" class="form-label">Enter Casual Leave Per Month </label>
+            <input type="text" class="form-control" id="casualMonth" name="casualmonth" [(ngModel)]="leave.casualmonth">
+          </div>
+
+          <div class="mb-3">
+            <label for="sickMonth" class="form-label">Enter Sick Leave Per Month </label>
+            <input type="text" class="form-control" id="sickMonth" name="sickmonth" [(ngModel)]="leave.sickmonth">
+          </div>
+
+          <div class="mb-3">
+            <label for="halfMonth" class="form-label">Enter Half Leave Per Month </label>
+            <input type="text" class="form-control" id="halfMonth" name="halfmonth" [(ngModel)]="leave.halfmonth">
+          </div>
+
+          <button type="submit" class="btn btn-primary text-uppercase">Submit</button>
+          <div class="alert">
+            <p style="color: tomato;">Without CREATING Policy WEBSITE CANT RUN PROPERLY !!</p>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/5.1.3/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>

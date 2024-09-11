@@ -13,6 +13,7 @@
                   <th scope="col">Basic Pay</th>
                   <th scope="col">Joined Date</th>
                   <th scope="col">Email</th>
+                  <th scope="col">Status</th>
                   <th scope="col"></th>
                   <th scope="col"></th>
                 </tr>
@@ -31,6 +32,11 @@
                   <td class="fw-medium">{{data.base_package}}</td>
                   <td class="fw-medium">{{data.registered_date}}</td>
                   <td class="fw-medium">{{data.employee_mail}}</td>
+                  <td class="fw-medium">{{data.status.status_name}}</td>
+                  <td class="fw-medium">
+                    <button *ngIf="data.status.status_id === 6" class="btn btn-danger" (click)="block(data.employee_id)">Block</button>
+                    <button *ngIf="data.status.status_id === 7" class="btn btn-success" (click)="unblock(data.employee_id)">UnBlock</button>
+                  </td>
                   <td class="fw-medium">
                     <button class="btn btn-primary" (click)="edit(data.employee_id)">Edit</button>
                   </td>

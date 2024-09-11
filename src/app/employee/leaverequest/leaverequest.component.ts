@@ -20,6 +20,10 @@ export class LeaverequestComponent implements OnInit{
     })
   }
   submit(){
+    if(!this.employee.reason || !this.employee.leaveDate){
+      alert ("Enter All Values")
+    }
+    else{
     const reasonForm = new FormData()
     const guestID = sessionStorage.getItem('guestID')
     reasonForm.append('date',this.employee.leaveDate)
@@ -27,5 +31,7 @@ export class LeaverequestComponent implements OnInit{
     this.services.addLeaverequest(reasonForm,guestID).subscribe((response:any)=>{
       alert("Leave Request Sent")
     })
+    }
+    
   }
 }

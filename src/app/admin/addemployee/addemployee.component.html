@@ -39,6 +39,11 @@
     <label for="retypePassword" class="form-label">Retype Password</label>
     <input type="password" class="form-control" id="retypePassword" name="repassword" [(ngModel)]="employee.repassword">
   </div>
+
+  <div *ngIf="errorMessage === true" class="alert alert-danger alert-dismissible fade show" role="alert">
+    <strong>Error:</strong> Password And ReType Password Doesnt Match
+    <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+  </div>
   
   <button type="submit" class="btn btn-primary text-uppercase">Submit</button>
 </form>

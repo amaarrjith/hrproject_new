@@ -19,12 +19,24 @@ export class SalaryMonthComponent implements OnInit{
     })
   }
   generate(){
-    console.log(this.employee.name)
-    const salarymonthForm = new FormData()
-    salarymonthForm.append('id',this.employee.name)
-    this.services.generateSalaryMonth(salarymonthForm).subscribe((response:any)=>{
-      alert("Salary Processed")
-    })
+    if (!this.employee.name){
+      alert("Choose A Employee")
+    }
+    else{
+      console.log(this.employee.name)
+      const salarymonthForm = new FormData()
+      salarymonthForm.append('id',this.employee.name)
+      this.services.generateSalaryMonth(salarymonthForm).subscribe((response:any)=>{
+        if (response.success === true){
+          alert("Salary Processed")
+        }
+        else if(response.success === "Done"){
+          alert("Salary Already Processed For This Month")
+        }
+        
+      })
+    }
+    
   }
 
 }

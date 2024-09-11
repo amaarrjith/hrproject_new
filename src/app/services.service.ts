@@ -115,4 +115,34 @@ export class ServicesService {
   contactAdmin(contactForm:FormData,id:any){
     return this.http.post(`${this.baseUrl}contactform/${id}`,contactForm)
   }
+  viewAdminMessages(){
+    return this.http.get(`${this.baseUrl}contactform`)
+  }
+  deleteMessages(id:any){
+    return this.http.delete(`${this.baseUrl}contactform/${id}`)
+  }
+  viewMessages(id:any){
+    return this.http.get(`${this.baseUrl}contactform/${id}`)
+  }
+  checkPolicy(){
+    return this.http.get(`${this.baseUrl}checkpolicy`)
+  }
+  checkMonth(){
+    return this.http.get(`${this.baseUrl}checkmonth`)
+  }
+  checkStatus(){
+    return this.http.get(`${this.baseUrl}checkstatus`)
+  }
+  createPolicy(policyForm:FormData){
+    return this.http.post(`${this.baseUrl}addpolicy`,policyForm)
+  }
+  blockEmployee(id:any){
+    return this.http.get(`${this.baseUrl}blockemployee/${id}`)
+  }
+  unblockEmployee(id:any){
+    return this.http.get(`${this.baseUrl}unblockemployee/${id}`)
+  }
+  getCount(){
+    return this.http.get(`${this.baseUrl}count`)
+  }
 }

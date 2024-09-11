@@ -33,6 +33,9 @@ import { EmpleavereductionComponent } from './employee/empleavereduction/empleav
 import { ValidationComponent } from './forgetpassword/validation/validation.component';
 import { EnterotpComponent } from './forgetpassword/enterotp/enterotp.component';
 import { ChangepasswordComponent } from './forgetpassword/changepassword/changepassword.component';
+import { ViewmessagesComponent } from './admin/viewmessages/viewmessages.component';
+import { ViewmessagebyidComponent } from './admin/viewmessagebyid/viewmessagebyid.component';
+import { AddpolicyComponent } from './addpolicy/addpolicy.component';
 
 
 
@@ -67,7 +70,10 @@ import { ChangepasswordComponent } from './forgetpassword/changepassword/changep
     EmpleavereductionComponent,
     ValidationComponent,
     EnterotpComponent,
-    ChangepasswordComponent
+    ChangepasswordComponent,
+    ViewmessagesComponent,
+    ViewmessagebyidComponent,
+    AddpolicyComponent
     
   ],
   imports: [

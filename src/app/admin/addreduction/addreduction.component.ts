@@ -20,12 +20,16 @@ export class AddreductionComponent implements OnInit{
     })
   }
   submit(){
+    if(!this.reduction.employee || !this.reduction.amount || !this.reduction.reason){
+      alert("Enter All Values To Proceed")
+    }
     const reductionForm = new FormData()
     reductionForm.append('employee',this.reduction.employee)
     reductionForm.append('amount',this.reduction.amount)
     reductionForm.append('reason',this.reduction.reason)
     this.services.addReduction(reductionForm).subscribe((response:any)=>{
       alert("Reduction To Employee Done !!")
+      location.reload()
     })
   }
 

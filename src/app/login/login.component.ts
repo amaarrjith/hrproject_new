@@ -18,7 +18,7 @@ export class LoginComponent implements OnInit{
   }
   submit(){
     if (this.login.username === '' || this.login.password === ''){
-      alert("Enter Username and Password To Proceed")
+      
       const userID = document.getElementById('userid') as HTMLInputElement
       const passID = document.getElementById('passid') as HTMLInputElement
       if (this.login.username === ''){
