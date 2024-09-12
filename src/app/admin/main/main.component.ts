@@ -33,6 +33,10 @@ export class MainComponent implements OnInit{
     this.services.getCount().subscribe((response:any)=>{
       this.countArray = response
     })
+
+    this.services.checkLeavetype().subscribe((response:any)=>{
+      console.log(response)
+    })
   }
 
   logout(){

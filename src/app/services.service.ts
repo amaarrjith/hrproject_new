@@ -145,4 +145,7 @@ export class ServicesService {
   getCount(){
     return this.http.get(`${this.baseUrl}count`)
   }
+  checkLeavetype(){
+    return this.http.get(`${this.baseUrl}checkleavetype`)
+  }
 }

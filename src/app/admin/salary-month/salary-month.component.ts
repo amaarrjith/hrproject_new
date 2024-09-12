@@ -27,6 +27,7 @@ export class SalaryMonthComponent implements OnInit{
       const salarymonthForm = new FormData()
       salarymonthForm.append('id',this.employee.name)
       this.services.generateSalaryMonth(salarymonthForm).subscribe((response:any)=>{
+        console.log(response)
         if (response.success === true){
           alert("Salary Processed")
         }
