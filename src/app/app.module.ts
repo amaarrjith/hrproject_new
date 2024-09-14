@@ -36,6 +36,7 @@ import { ChangepasswordComponent } from './forgetpassword/changepassword/changep
 import { ViewmessagesComponent } from './admin/viewmessages/viewmessages.component';
 import { ViewmessagebyidComponent } from './admin/viewmessagebyid/viewmessagebyid.component';
 import { AddpolicyComponent } from './addpolicy/addpolicy.component';
+import { AttendanceComponent } from './admin/attendance/attendance.component';
 
 
 
@@ -73,7 +74,8 @@ import { AddpolicyComponent } from './addpolicy/addpolicy.component';
     ChangepasswordComponent,
     ViewmessagesComponent,
     ViewmessagebyidComponent,
-    AddpolicyComponent
+    AddpolicyComponent,
+    AttendanceComponent
     
   ],
   imports: [

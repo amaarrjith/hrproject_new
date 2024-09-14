@@ -148,4 +148,7 @@ export class ServicesService {
   checkLeavetype(){
     return this.http.get(`${this.baseUrl}checkleavetype`)
   }
+  attendance(attendanceForm:FormData){
+    return this.http.post(`${this.baseUrl}attendance/`,attendanceForm)
+  }
 }

@@ -32,6 +32,7 @@ import { ChangepasswordComponent } from './forgetpassword/changepassword/changep
 import { ViewmessagesComponent } from './admin/viewmessages/viewmessages.component';
 import { ViewmessagebyidComponent } from './admin/viewmessagebyid/viewmessagebyid.component';
 import { AddpolicyComponent } from './addpolicy/addpolicy.component';
+import { AttendanceComponent } from './admin/attendance/attendance.component';
 
 const routes: Routes = [
   {path:'',redirectTo:'login',pathMatch:'full'},
@@ -51,7 +52,8 @@ const routes: Routes = [
     {path:'updatepolicy',component:UpdatepolicyComponent},
     {path:'viewsalary',component:ViewsalaryComponent},
     {path:'viewmessages',component:ViewmessagesComponent},
-    {path:'viewmessagebyid/:id',component:ViewmessagebyidComponent}
+    {path:'viewmessagebyid/:id',component:ViewmessagebyidComponent},
+    {path:'attendance',component:AttendanceComponent}
   ]},
   {path:'employeemain',component:EmployeemainComponent,children:[
     {path:'employeeindex',component:EmployeeindexComponent},

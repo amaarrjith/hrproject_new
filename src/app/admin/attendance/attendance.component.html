@@ -1,0 +1,35 @@
+<div class="container-fluid">
+    <div class="card mt-5">
+      <div class="card-body text-uppercase">
+        <h5 class="card-title fw-semibold mb-4">Add Leave Form</h5>
+        <div class="card">
+          <div class="card-body">
+            <form (ngSubmit)="submit()">
+                <div class="mb-3">
+                    <label for="employeeSelect" class="form-label">Choose Employee Name</label>
+                    <select class="form-select" id="employeeSelect" aria-label="Select employee" name="employee" [(ngModel)]="attendance.employee">
+                      <option value="" selected disabled>Select an employee</option>
+                     
+                      <option *ngFor="let data of employeeArray" value="{{data.employee_id}}">{{data.employee_name}}</option>
+                     
+                      
+                    </select>
+                  </div>
+                  
+              <div class="mb-3">
+                <label for="exampleInputEmail1" class="form-label">Choose Date</label>
+                <input type="date" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" name="date" [(ngModel)]="attendance.date">
+                
+              </div>
+              
+              
+              
+              <button type="submit" class="btn btn-primary text-uppercase">Submit</button>
+            </form>
+          </div>
+        </div>
+        
+        
+    </div>
+    
+</div>
