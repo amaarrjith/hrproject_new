@@ -37,6 +37,8 @@ import { ViewmessagesComponent } from './admin/viewmessages/viewmessages.compone
 import { ViewmessagebyidComponent } from './admin/viewmessagebyid/viewmessagebyid.component';
 import { AddpolicyComponent } from './addpolicy/addpolicy.component';
 import { AttendanceComponent } from './admin/attendance/attendance.component';
+import { ViewattendanceComponent } from './admin/viewattendance/viewattendance.component';
+import { ViewattendacebyidComponent } from './employee/viewattendacebyid/viewattendacebyid.component';
 
 
 
@@ -75,7 +77,9 @@ import { AttendanceComponent } from './admin/attendance/attendance.component';
     ViewmessagesComponent,
     ViewmessagebyidComponent,
     AddpolicyComponent,
-    AttendanceComponent
+    AttendanceComponent,
+    ViewattendanceComponent,
+    ViewattendacebyidComponent
     
   ],
   imports: [

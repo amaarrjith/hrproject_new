@@ -16,5 +16,8 @@ export class EmpleavereductionComponent implements OnInit{
       console.log(this.reductionArray)
     })
   }
+  view(id:any){
+
+  }
 
 }

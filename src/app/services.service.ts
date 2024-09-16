@@ -149,6 +149,18 @@ export class ServicesService {
     return this.http.get(`${this.baseUrl}checkleavetype`)
   }
   attendance(attendanceForm:FormData){
-    return this.http.post(`${this.baseUrl}attendance/`,attendanceForm)
+    return this.http.post(`${this.baseUrl}attendance`,attendanceForm)
+  }
+  viewallAttendance(){
+    return this.http.get(`${this.baseUrl}attendance`)
+  }
+  viewAttendancebyId(employeeID:any){
+    return this.http.get(`${this.baseUrl}attendance/${employeeID}`)
+  }
+  reportAttendance(id:any){
+    return this.http.get(`${this.baseUrl}reportattendance/${id}`)
+  }
+  deleteAttendance(id:any){
+    return this.http.delete(`${this.baseUrl}attendance/${id}`)
   }
 }

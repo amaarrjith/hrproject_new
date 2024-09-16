@@ -33,6 +33,8 @@ import { ViewmessagesComponent } from './admin/viewmessages/viewmessages.compone
 import { ViewmessagebyidComponent } from './admin/viewmessagebyid/viewmessagebyid.component';
 import { AddpolicyComponent } from './addpolicy/addpolicy.component';
 import { AttendanceComponent } from './admin/attendance/attendance.component';
+import { ViewattendanceComponent } from './admin/viewattendance/viewattendance.component';
+import { ViewattendacebyidComponent } from './employee/viewattendacebyid/viewattendacebyid.component';
 
 const routes: Routes = [
   {path:'',redirectTo:'login',pathMatch:'full'},
@@ -53,7 +55,8 @@ const routes: Routes = [
     {path:'viewsalary',component:ViewsalaryComponent},
     {path:'viewmessages',component:ViewmessagesComponent},
     {path:'viewmessagebyid/:id',component:ViewmessagebyidComponent},
-    {path:'attendance',component:AttendanceComponent}
+    {path:'attendance',component:AttendanceComponent},
+    {path:'viewattendance',component:ViewattendanceComponent}
   ]},
   {path:'employeemain',component:EmployeemainComponent,children:[
     {path:'employeeindex',component:EmployeeindexComponent},
@@ -64,7 +67,8 @@ const routes: Routes = [
     {path:'employeebonus',component:EmployeebonusComponent},
     {path:'employeereduction',component:EmployeereductionComponent},
     {path:'contactadmin',component:ContactadminComponent},
-    {path:'empleavereduction',component:EmpleavereductionComponent}
+    {path:'empleavereduction',component:EmpleavereductionComponent},
+    {path:'viewattendancebyid',component:ViewattendacebyidComponent}
   ]},
   {path:'login',component:LoginComponent},
   {path:'forgetpassword/validation',component:ValidationComponent},
