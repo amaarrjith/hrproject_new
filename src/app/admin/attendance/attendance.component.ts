@@ -28,6 +28,7 @@ export class AttendanceComponent implements OnInit{
     attendanceForm.append('date',this.attendance.date)
     this.services.attendance(attendanceForm).subscribe((response:any)=>{
       alert("Employee Leave Marked")
+      location.reload()
     })
   }
   

@@ -50,6 +50,12 @@ export class LoginComponent implements OnInit{
       else if(response.failure === true){
         alert("Invalid LoginID or Password")
       }
+      else if(response.failure === "Done"){
+        alert("Employee Blocked !! Contact Admin")
+      }
+      else{
+        alert("Unknown Error Ocuured")
+      }
       
     })
   }
