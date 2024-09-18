@@ -31,7 +31,7 @@
                     <h6 class="message-subtitle">Attachments :</h6>
                     <ul class="list-unstyled attachment-list">
                         <li *ngIf="messageArray[0].file;else noAttachment">
-                            <span class="message-content"><a href="{{messageArray[0].file}}">View Attachment</a></span>
+                            <span class="message-content"><a href="http://127.0.0.1:8000{{messageArray[0].file}}">View Attachment</a></span>
                         </li>
                     </ul>
                     <ng-template #noAttachment>
